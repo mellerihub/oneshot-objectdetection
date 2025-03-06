@@ -28,7 +28,7 @@ git clone https://github.com/mellerihub/oneshot-objectdetection.git
 
 ### directory structure <br>
 
-**1.Image and annotation file pair**<br>
+#### **1.Image and annotation file pair**<br>
 :This method uses an annotation file that contains the original image and its bounding box information.<br>
 
 ```
@@ -39,9 +39,8 @@ data/
 ├── img_02_label.txt
 └── ...
 ```
-
-#### Annotation file format
-The annotation file (ex: `img_01_label.txt`) follows the following format:
++ Annotation file format
+: The annotation file (ex: `img_01_label.txt`) follows the following format:
 ```
 class 0, x, y, w, h
 class 1, x, y, w, h
