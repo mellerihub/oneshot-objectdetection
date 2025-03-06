@@ -1,13 +1,6 @@
 import os
-import sys
-import logging
-import random
-import pandas as pd
 import numpy as np
-from datetime import datetime, timezone
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import precision_score
-from sklearn.model_selection import train_test_split
+
 
 def output(pipeline: dict):
     logger = pipeline['logger']
