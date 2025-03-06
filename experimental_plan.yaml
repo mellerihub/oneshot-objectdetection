@@ -1,0 +1,44 @@
+name: oneshot_det
+version: 1.0.0
+
+control:
+  backup:       
+    type: count
+    value: 1 
+
+  check_resource: True  
+
+solution:
+  pip:                       
+    requirements:             
+      - requirements.txt
+
+  # credential:                # Optional) Credential(train/inferenece의 input, output의 파일이 S3인 경우 공통 적용되는 인증 정보)
+  #   profile_name: aws-profile-name
+  function:                  
+    input:
+      def: oneshot_det.input    
+    train:
+      def: oneshot_det.train
+      argument:
+        device: cuda
+    inference:
+      def: oneshot_det.inference
+      argument:
+        threshold: 'Copper wire tightening: 0.5, Ground wire assembled on screw: 0.6'
+        # threshold: 0.5
+        nms_threshold: 0.1
+        device: cuda
+        average_embed: False
+        measure: cosine
+        score: max
+    output:
+      def: oneshot_det.output
+  train:
+    dataset_uri: [train_dataset/] 
+    artifact_uri: train_artifact/
+    pipeline: [input, train]
+  inference:
+    dataset_uri: inference_dataset/
+    artifact_uri: inference_artifact/ 
+    pipeline: [input, inference]
