@@ -30,7 +30,7 @@ git clone https://github.com/mellerihub/oneshot-objectdetection.git
 :This method uses an annotation file that contains the original image and its bounding box information.<br>
 
 ```
-Folder hierarchy
+# Folder hierarchy
 data/
 ├── img_01.jpg
 ├── img_01_label.txt
@@ -40,7 +40,7 @@ data/
 ```
 The annotation file (ex: `img_01_label.txt`) follows the following format:
 ```
-Annotation file format
+# Annotation file format
 class 0, x, y, w, h
 class 1, x, y, w, h
 ...
@@ -49,7 +49,7 @@ class 1, x, y, w, h
 :This method creates a folder for each class and includes the cropped image of the corresponding class in it.
 
 ```
-Folder hierarchy
+# Folder hierarchy
 data/
 ├── Copper wire tightening/
 │ ├── img01.jpeg
@@ -68,6 +68,7 @@ If you have both the original and cropped images<br>
 If you provide both the original image and the cropped images from it, use the following naming convention:
 
 ```
+# Folder hierarchy
 data/
 ├── Copper wire tightening/
 │ ├── origin01.jpeg # Original image
