@@ -25,7 +25,8 @@ git clone https://github.com/mellerihub/oneshot-objectdetection.git
 
 <br>
 3. Configure the dataset for fewshot/oneshot embedding into your experiment path.<br>
-**3-1.Image and annotation file pair**<br>
+
+**1.Image and annotation file pair**<br>
 :This method uses an annotation file that contains the original image and its bounding box information.<br>
 
 ```
@@ -44,7 +45,7 @@ class 0, x, y, w, h
 class 1, x, y, w, h
 ...
 ```
-**3-2.Cropped image of class folder structure**<br>
+**2.Cropped image of class folder structure**<br>
 :This method creates a folder for each class and includes the cropped image of the corresponding class in it.
 
 ```
