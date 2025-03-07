@@ -1,20 +1,4 @@
-# self.device = self.args['device']
 
-#         if not gpu_ok():
-#             self.device = 'cpu'
-
-#         if self.device == 'cpu':
-#             self.asset.save_warning('CUDA not Working!')
-#             self.asset.save_warning('It is strongly recommended to use CUDA for fast inference')
-
-#         self.target_class = self.config['target_class']
-
-#         if isinstance(self.target_class, str):
-#             if self.target_class == 'ALL':
-#                 self.target_class = None
-
-#         else:
-#             self.target_class = [str(x) for x in self.target_class]
 import numpy as np
 import logging
 from tqdm import tqdm
